@@ -54,7 +54,7 @@ jobs:
       - name: 自定义插件
         run: |
            cd package
-           git clone  https://github.com/Flowers-in-thorns/luci-app-vssr-coexist
+           git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist
            git clone https://github.com/Aslin-Ameng/luci-theme-Light.git 
            git clone https://github.com/Aslin-Ameng/luci-theme-Night.git 
            git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git 
