@@ -53,7 +53,7 @@ jobs:
           df -h
       - name: 自定义插件
         run: |
-           cd package/lean
+           cd package
            git clone  https://github.com/Flowers-in-thorns/luci-app-vssr-coexist
            git clone https://github.com/Aslin-Ameng/luci-theme-Light.git 
            git clone https://github.com/Aslin-Ameng/luci-theme-Night.git 
