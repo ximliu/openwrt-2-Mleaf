@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: G-DOCK
+name: x86_64
 on:
    #push:
     #branches: 
@@ -96,10 +96,11 @@ jobs:
           # 
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
-          # 编译树莓派3b+固件:
+          # 编译x86_64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_ipq40xx=y
-          CONFIG_TARGET_ipq40xx_DEVICE_p2w_r619ac-128m=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
           EOF
           # 固件压缩:
           cat >> .config <<EOF
@@ -218,8 +219,8 @@ jobs:
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
-          # CONFIG_TARGET_IMAGES_PAD is not set
-          # CONFIG_VMDK_IMAGES is not set
+          CONFIG_TARGET_IMAGES_PAD is not set
+          CONFIG_VMDK_IMAGES is not set
           EOF
           # 
           # ========================固件定制部分结束========================
